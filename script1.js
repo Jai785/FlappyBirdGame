@@ -17,7 +17,7 @@ hole.addEventListener("animationiteration", hol);
 function hol() {
   var random = - ((Math.random() * 200) + 100);
   hole.style.top = random + "px";
-  counter++;
+  
 };
 
 
@@ -71,7 +71,7 @@ hm.addEventListener('click', function start() {
 restart.addEventListener('click', function start() {
   console.log("Restart button is working");
   window.open('game.html', '_self');
-
+counter++;
 
 });
 
