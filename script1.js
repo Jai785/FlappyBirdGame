@@ -17,7 +17,7 @@ hole.addEventListener("animationiteration", hol);
 function hol() {
   var random = - ((Math.random() * 200) + 100);
   hole.style.top = random + "px";
-  
+  counter ++;
 };
 
 
