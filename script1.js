@@ -9,7 +9,7 @@ let hm = document.getElementById("hm");
 let restart = document.getElementById("restart");
 
 let jumping = 0;
-let score = 0;
+let counter = 0;
 
 // Animation -->
 hole.addEventListener("animationiteration", hol);
@@ -17,9 +17,10 @@ hole.addEventListener("animationiteration", hol);
 function hol() {
   var random = - ((Math.random() * 200) + 100);
   hole.style.top = random + "px";
+  counter++
 };
 
-/*
+
 // Fall and game over -->
 var fall = setInterval(function () {
   var birdTop = parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
@@ -31,14 +32,14 @@ var fall = setInterval(function () {
 
   if ((birdTop > 265) || ((blockLeft < 50) && (blockLeft > -50) && ((birdTop < hTop) || (birdTop > hTop + 100)))) {
     result.style.display = "block";
-    text.innerText = `Score : ${score}`;
+    text.innerText = `Score : ${counter}`;
     game.style.display = "none";
-    score = 0;
+    counter = 0;
 
   }
 
 }, 10)
-*/
+
 
 // Jump---
 function jump() {
