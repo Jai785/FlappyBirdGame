@@ -19,7 +19,7 @@ function hol() {
   hole.style.top = random + "px";
 };
 
-
+/*
 // Fall and game over -->
 var fall = setInterval(function () {
   var birdTop = parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
@@ -38,6 +38,7 @@ var fall = setInterval(function () {
   }
 
 }, 10)
+*/
 
 // Jump---
 function jump() {
