@@ -34,7 +34,7 @@ var fall = setInterval(function () {
     result.style.display = "block";
     text.innerText = `Score : ${counter}`;
     game.style.display = "none";
-    counter = 0;
+    
 
   }
 
@@ -71,7 +71,7 @@ hm.addEventListener('click', function start() {
 restart.addEventListener('click', function start() {
   console.log("Restart button is working");
   window.open('game.html', '_self');
-counter++;
+counter = 0;
 
 });
 
