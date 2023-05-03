@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    /* height: 100%;
+    width: 100%;
+     */
+
+    height: 350px;
+    width: 240px;
+    margin: auto;
+}
+
+
+.game-container {
+    width: 100%;
+    height: 100%;
+    height: 350px;
+    width: 550px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+
+#game {
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    border: 1px solid black;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+
+
+#block {
+    width: 40px;
+    height: 300px;
+    background-color: green;
+    position: relative;
+    left: 500px;
+    animation: block 3s linear infinite;
+}
+
+#hole {
+    height: 100px;
+    width: 40px;
+    background-color: white;
+    position: relative;
+    left: 500px;
+    top: -300px;
+    animation: block 3s linear infinite;
+}
+
+@keyframes block {
+    0% {
+        left: 500px;
+    }
+
+    100% {
+        left: -50px;
+    }
+}
+
+#bird {
+    position: absolute;
+    top: 50px;
+    height: 40px;
+    width: 40px;
+}
+
+#bird img {
+    height: 40px;
+    width: 40px;
+}
+
+
+#result {
+    height: 200px;
+    width: 300px;
+    background-color: brown;
+    margin: 5rem auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: none;
+    text-align: center;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 11px;
+    background-color: green;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 10px auto;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+#text {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: seashell;
+}
+
+
+
+
+
+@media only screen and (max-width:750px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        transform: rotate(90deg);
+        margin: auto;
+    }
+
+}
+
+#fly {
+    height: 125px;
+    top: 175px;
+    left: 350px;
+    position: absolute;
+    width: 150px;
+    border: 1px solid black;
+    background-color: yellow;
+    border-radius: 90px 10px 10px 10px;
+    opacity: 0.4;
+}
+
+
+/* Mobile devices ke liye CSS */
+@media only screen and (max-width: 767px) {
+
+    /* Game ke container element ka width and height set karna */
+    #game-container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    /* Game canvas element ka width and height set karna */
+    #game-canvas {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Desktop devices ke liye CSS */
+@media only screen and (min-width: 768px) {
+
+    /* Game ke container element ka width and height set karna */
+    #game-container {
+        width: 800px;
+        height: 600px;
+    }
+
+    /* Game canvas element ka width and height set karna */
+    #game-canvas {
+        width: 200px;
+        height: 400px;
+    }
+}
